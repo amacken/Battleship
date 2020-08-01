@@ -1,5 +1,9 @@
 * {
-    background-color: gray;
+    background-color: lightgray;
+}
+
+img {
+    width: 30%;
 }
 
 h1 {
@@ -9,6 +13,10 @@ h1 {
 
 .intro {
     text-align: center;
+}
+
+.game {
+    display: flex;
 }
 
 .gameboard {
@@ -22,4 +30,12 @@ h1 {
 .box {
     background-color: seashell;
     color: blue;
+}
+
+.player1 {
+    margin: 50px 0 0 70px;
+}
+
+.player2 {
+    margin: 50px 70px 0 0;
 }
