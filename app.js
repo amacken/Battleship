@@ -1,32 +1,62 @@
-console.log('test')
-console.log($)
+// console.log('test')
+// console.log($)
 
 $(() => {
-    const playerOneList = [];
+    const rows = 10;
+    const cols = 10;
+    const squareSize = 50;
 
-    const playerTwoList = [];
+    const $gameBoardContainer = document.getElementById('gameboard');
 
-    const renderOne = (arr) => {
-        const $ulOne = $('.theList');
-        for(let item of arr) {
-            const $liOne = $('<li class="listOne">');
+    for(let i=0; i < cols; i++) {
+        for (let j=0; j < rows; j++) {
+            let $square = $('<div>');
+            $gameBoardContainer.append($square);
+            $square.attr('id', '"s" + j + i');
 
-            $('#playerOnePicks' > 'h4' > playerOneList).addClass('theList')
-            $liOne.text(item);
-            $liOne.appendTo('#playerOnePicks');
+            let topPosition = j * squareSize;
+            let leftPosition = i * squareSize;
+
+            $square.css('top', 'topPosition + "px"')
+            $square.css('left', 'leftPosition + "px"')
         }
     }
 
-    $(() => {
-        $('form').on('submit', (event) => {
-            const inputValue = $('#input-box').val();
-            playerOneList.push(inputValue)
-            event.preventDefault();
-            $(event.currentTarget).trigger('reset');
-            renderOne(playerOneList)
-        })
-    })
+    let hitCount = 0;
 
-    
+    let gameBoard = [
+        [0,0,0,0,0,0,0,0,0,0],
+        [0,0,0,0,0,0,0,0,0,0],
+        [0,0,0,0,0,0,0,0,0,0],
+        [0,0,0,0,0,0,0,0,0,0],
+        [0,0,0,0,0,0,0,0,0,0],
+        [0,0,0,0,0,0,0,0,0,0],
+        [0,0,0,0,0,0,0,0,0,0],
+        [0,0,0,0,0,0,0,0,0,0],
+        [0,0,0,0,0,0,0,0,0,0],
+        [0,0,0,0,0,0,0,0,0,0]
+    ]
+
+    $gameBoardContainer.onabort('click', attack)
+
+    const attack = (event) => {
+        if (event.target !== event.currentTarget) {
+            let row = event.target.id.substring(1,2);
+            let col = event.target.id.substring(2,3);
+            if (gameBoard[row][col] === 0) {
+                event.target.css('background-color', '#bbb');
+                gameBoard[row][col] = 3;
+            } else if (gameBoard[row][col] === 1) {
+                event.target.css('background-color', 'red');
+                gameBoard[row][col] = 2;
+                hitCount++;
+                if (hitCount === 17) {
+                    alert('You sunk all the enemy ships! You win!');
+                }
+            } else if (gameBoard[row][col] > 1) {
+                alert('You already tried there, go again!')
+            }
+        }
+    }
 
 })
