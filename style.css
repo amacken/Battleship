@@ -2,10 +2,6 @@
     background-color: lightgray;
 }
 
-img {
-    width: 30%;
-}
-
 h1 {
     text-align: center;
     font-size: 3em;
@@ -15,8 +11,28 @@ h1 {
     text-align: center;
 }
 
+h2 {
+    text-align: center;
+}
+
+[for="input-box"] {
+    align-items: center;
+}
+
+#input-box {
+    height: 30px; width: 300px;
+}
+
+#submit {
+    height: 30px; width: 100px;
+    border: none;
+    background-color: firebrick;
+    color: white;
+}
+
 .game {
-    display: flex;
+    width: 800px; height: 730px;
+    margin: 0 auto;
 }
 
 .gameboard {
@@ -32,10 +48,10 @@ h1 {
     color: blue;
 }
 
-.player1 {
+/* .player1 {
     margin: 50px 0 0 70px;
-}
+} */
 
-.player2 {
+/* .player2 {
     margin: 50px 70px 0 0;
-}
+} */
