@@ -11,82 +11,24 @@
 </head>
 <body>
     <h1>Battleship</h1>
-        
-    <p class="intro">
-        Click a place on the board you wish to attack. There are 17 ships scattered throughout, the first player to sink 9 ships wins!
-    </p> 
-    <hr/> 
+    <div class="intro">
+        <p>Click a place on the board where you wish to attack. Each board has 5 boats:</p>
+        <ul>
+            <li class="ship">Carrier - length (5)</li>
+            <li class="ship">Battleship - length (4)</li>
+            <li class="ship">Destroyer - length (3)</li>
+            <li class="ship">Submarine - length (3)</li>
+            <li class="ship">Patrol Boat - length (2)</li>
+        </ul>
+        <p>The first player to sink all of the enemy ships wins!</p> 
 
-    <div class="game">
-
-        <h2>Where Do You Want To Attack?</h2>
-        <form>
-            <label for="input-box"></label>
-            <input type="text" name="" value="" id="input-box">
-            <button type="submit" name="button" id="submit">ADD</button>
-        </form>
-
-        <div class="player1">
-            <h3>Player 1</h3>
-        </div>
-        
-        <div class="gameboard">
-            <button class="box">A1</button>
-            <button class="box">A2</button>
-            <button class="box">A3</button>
-            <button class="box">A4</button>
-            <button class="box">A5</button>
-            <button class="box">A6</button>
-            <button class="box">A7</button>
-            <button class="box">B1</button>
-            <button class="box">B2</button>
-            <button class="box">B3</button>
-            <button class="box">B4</button>
-            <button class="box">B5</button>
-            <button class="box">B6</button>
-            <button class="box">B7</button>
-            <button class="box">C1</button>
-            <button class="box">C2</button>
-            <button class="box">C3</button>
-            <button class="box">C4</button>
-            <button class="box">C5</button>
-            <button class="box">C6</button>
-            <button class="box">C7</button>
-            <button class="box">D1</button>
-            <button class="box">D2</button>
-            <button class="box">D3</button>
-            <button class="box">D4</button>
-            <button class="box">D5</button>
-            <button class="box">D6</button>
-            <button class="box">D7</button>
-            <button class="box">E1</button>
-            <button class="box">E2</button>
-            <button class="box">E3</button>
-            <button class="box">E4</button>
-            <button class="box">E5</button>
-            <button class="box">E6</button>
-            <button class="box">E7</button>
-            <button class="box">F1</button>
-            <button class="box">F2</button>
-            <button class="box">F3</button>
-            <button class="box">F4</button>
-            <button class="box">F5</button>
-            <button class="box">F6</button>
-            <button class="box">F7</button>
-            <button class="box">G1</button>
-            <button class="box">G2</button>
-            <button class="box">G3</button>
-            <button class="box">G4</button>
-            <button class="box">G5</button>
-            <button class="box">G6</button>
-            <button class="box">G7</button>
-        </div>
-        
-        <div class="player2">
-            <h3>Player 2</h3>
-        </div>
+    </div>    
+    <hr/>
+    
+    <div id="gameboard">
         
     </div>
+        
 	<script src="app.js" charset="utf-8"></script>
 </body>
 </html>
