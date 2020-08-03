@@ -25,6 +25,8 @@ $(() => {
         }
     }
 
+    $player1 = $('<h2>').text('Player 1').prependTo('.boards').css('text-align', 'center');
+
     let hitCount = 0;
 
     let gameBoard = [
@@ -61,6 +63,8 @@ $(() => {
             }
         }
     }
+
+    $player2 = $('<h2>').text('Player 2').appendTo('.boards').css('text-align', 'center');
 
     const rows2 = 10;
     const columns2 = 10;
@@ -113,7 +117,7 @@ $(() => {
                 gameBoard2[row2][column2] = 2;
                 hitCount2++;
                 if (hitCount2 === 17) {
-                    alert("All the enemy ships have been destroyed! Player 2!")
+                    alert("All the enemy ships have been destroyed! Player 2 wins!")
                 }
             } else if (gameBoard2[row2][column2] > 1) {
                 alert("You've already attacked there, try another location!")
