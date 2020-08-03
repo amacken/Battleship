@@ -9,28 +9,35 @@ h1 {
 
 .intro {
     text-align: center;
+    width: 100%;
 }
 
 .ship {
     list-style-type: none;
 }
 
-body {
-    margin: 60px auto;
-    width: 70%;
-    max-width: 950px;
+.players {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
 }
 
-button, input {
-    font-size: 1.5em;
-    line-height: 1.4em;
-    color: #333;
-	margin-bottom:1em;
+body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 60px auto;
+    width: 80%;
+}
+
+.boards {
+    display: flex;
+    justify-content: space-around;
 }
 
 #gameboard, #gameboard2 {
-	position:relative;
-	margin: 2em auto;
+    position: relative;
+	margin: 2em;
 	width: 500px;
 	height: 500px;
 }
@@ -38,8 +45,8 @@ button, input {
 #gameboard div, #gameboard2 div {
 	position:absolute;
 	box-sizing: border-box;
-	background: #f6f8f9;
-	border: 1px solid #ddd;
+	background: seashell;
+	border: 1px solid black;
 	width: 50px;
 	height: 50px;
 }
