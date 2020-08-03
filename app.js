@@ -4,20 +4,19 @@
 $(() => {
 
     $intro = $('<div class="intro">').prependTo('body')
-    $headline = $('<h1>').text('Battleship').prependTo($intro)
-    $info = $('<p>').text('Click a place on the board where you wish to attack. Each board has 5 boats:').appendTo($intro)
-    $ships = $('<ul class="ships">').appendTo($intro)
-    $Ship1 = $('<li class = ship>').text('Carrier - length (5)').appendTo($ships)
-    $Ship2 = $('<li class = ship>').text('Battleship - length (4)').appendTo($ships) 
-    $Ship3 = $('<li class = ship>').text('Destroyer - length (3)').appendTo($ships) 
-    $Ship4 = $('<li class = ship>').text('Submarine - length (3)').appendTo($ships) 
-    $Ship5 = $('<li class = ship>').text('Patrol Boat - length (2)').appendTo($ships)
-    $info2 = $('<p>').text('The first player to sink all of the enemy ships wins!').appendTo($intro)  
-    $hr = $('<hr/>').appendTo($intro)
-    $boards = $('<div class="boards">').appendTo('body')
-    $player1 = $('<h2>').text('Player 1').prependTo($boards).css('text-align', 'center');
-    $player2 = $('<h2>').text('Player 2').appendTo('.boards').css('text-align', 'center');
-    // $gameBoardContainer = $('<div id="gameboard">').appendTo($boards)
+        $headline = $('<h1>').text('Battleship').prependTo($intro)
+        $info = $('<p>').text('Click a place on the board where you wish to attack. Each board has 5 boats:').appendTo($intro)
+        $ships = $('<ul class="ships">').appendTo($intro)
+            $Ship1 = $('<li class = ship>').text('Carrier - length (5)').appendTo($ships)
+            $Ship2 = $('<li class = ship>').text('Battleship - length (4)').appendTo($ships) 
+            $Ship3 = $('<li class = ship>').text('Destroyer - length (3)').appendTo($ships) 
+            $Ship4 = $('<li class = ship>').text('Submarine - length (3)').appendTo($ships) 
+            $Ship5 = $('<li class = ship>').text('Patrol Boat - length (2)').appendTo($ships)
+        $info2 = $('<p>').text('The first player to sink all of the enemy ships wins!').appendTo($intro)  
+        $hr = $('<hr/>').appendTo($intro)
+        $players = $('<div class="players">').appendTo($intro)
+            $player1 = $('<h2>').text('Player 1').appendTo($players)
+            $player2 = $('<h2>').text('Player 2').appendTo($players)
 
     const rows = 10;
     const columns = 10;
