@@ -10,3 +10,36 @@ h1 {
 .intro {
     text-align: center;
 }
+
+.ship {
+    list-style-type: none;
+}
+
+body {
+    margin: 60px auto;
+    width: 70%;
+    max-width: 950px;
+}
+
+button, input {
+    font-size: 1.5em;
+    line-height: 1.4em;
+    color: #333;
+	margin-bottom:1em;
+}
+
+#gameboard, #gameboard2 {
+	position:relative;
+	margin: 2em auto;
+	width: 500px;
+	height: 500px;
+}
+
+#gameboard div, #gameboard2 div {
+	position:absolute;
+	box-sizing: border-box;
+	background: #f6f8f9;
+	border: 1px solid #ddd;
+	width: 50px;
+	height: 50px;
+}
