@@ -1,4 +1,3 @@
-* {
     background-color: lightgray;
     font-family: 'Quantico', sans-serif;
 }
@@ -10,6 +9,11 @@ h1 {
     text-shadow: 2px 2px gray;
     color: #1A6699;
     text-decoration: underline;
+    letter-spacing: 3px;
+}
+
+#ship {
+    width: 80%;
 }
 
 .intro {
@@ -26,6 +30,28 @@ h1 {
     width: 100%;
     display: flex;
     justify-content: space-around;
+    letter-spacing: 1px;
+    font-size: 1.25em;
+}
+
+.players img {
+    vertical-align: bottom;
+}
+
+#player1 {
+    background: -webkit-linear-gradient(#848482, #1A6699, #848482); 
+    /* battleship gray to battleship blue back to battleshp gray gradient */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
+}
+
+#player2 {
+    background: -webkit-linear-gradient(black, red, black); 
+    /* battleship gray to battleship blue back to battleshp gray gradient */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
 }
 
 body {
@@ -49,7 +75,7 @@ body {
 }
 
 #gameboard div, #gameboard2 div {
-	position:absolute;
+	position: absolute;
 	box-sizing: border-box;
 	background: seashell;
 	border: 1px solid black;
