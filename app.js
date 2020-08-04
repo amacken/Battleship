@@ -4,7 +4,7 @@
 $(() => {
 
     $intro = $('<div class="intro">').prependTo('body')
-        $headline = $('<h1>').text('Battleship').prependTo($intro)
+        $headline = $('<h1>').text('BATTLESHIP').prependTo($intro)
         $info = $('<p>').text('Click a place on the board where you wish to attack. Each board has 5 boats:').appendTo($intro)
         $ships = $('<ul class="ships">').appendTo($intro)
             $Ship1 = $('<li class = ship>').text('Carrier - length (5)').appendTo($ships)
@@ -63,7 +63,7 @@ $(() => {
             let column = event.target.id.substring(2,3);
     
             if (gameBoard[row][column] === 0) {
-                event.target.style.background = 'blue';
+                event.target.style.background = '#1A6699'; // battleship blue
                 gameBoard[row][column] = 3;
             } else if (gameBoard[row][column] === 1) {
                 event.target.style.background = 'red';
@@ -123,7 +123,7 @@ $(() => {
             let column2 = event.target.id.substring(2,3);
     
             if (gameBoard2[row2][column2] === 0) {
-                event.target.style.background = 'blue';
+                event.target.style.background = '#1A6699'; // battleship blue
                 gameBoard2[row2][column2] = 3;
             } else if (gameBoard2[row2][column2] === 1) {
                 event.target.style.background = 'red';
