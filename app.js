@@ -4,7 +4,10 @@
 $(() => {
 
     $intro = $('<div class="intro">').prependTo('body')
-        $headline = $('<h1>').text('BATTLESHIP').prependTo($intro)
+    img = '<img src="ship-emoji.png">'
+    img2 = '<img src="pirate-emoji.png">'
+    $headline = $('<h1>').text('BATTLESHIP').appendTo($intro)
+    $img3 = $('<img src="ship.png">').attr('id', 'ship').appendTo($intro)
         $info = $('<p>').text('Click a place on the board where you wish to attack. Each board has 5 boats:').appendTo($intro)
         $ships = $('<ul class="ships">').appendTo($intro)
             $Ship1 = $('<li class = ship>').text('Carrier - length (5)').appendTo($ships)
@@ -12,11 +15,11 @@ $(() => {
             $Ship3 = $('<li class = ship>').text('Destroyer - length (3)').appendTo($ships) 
             $Ship4 = $('<li class = ship>').text('Submarine - length (3)').appendTo($ships) 
             $Ship5 = $('<li class = ship>').text('Patrol Boat - length (2)').appendTo($ships)
-        $info2 = $('<p>').text('The first player to sink all of the enemy ships wins!').appendTo($intro)  
+        $info2 = $('<p>').text('A blue square signifies a miss while a red square means a hit. The first player to sink all of the enemy ships wins!').appendTo($intro)  
         $hr = $('<hr/>').appendTo($intro)
         $players = $('<div class="players">').appendTo($intro)
-            $player1 = $('<h2>').text('Player 1').appendTo($players)
-            $player2 = $('<h2>').text('Player 2').appendTo($players)
+            $player1 = $('<h2 id="player1">').html(`${img} Player 1 ${img}`).appendTo($players)
+            $player2 = $('<h2 id="player2">').html(`${img2} Player 2 ${img2}`).appendTo($players)
 
     const rows = 10;
     const columns = 10;
