@@ -1,9 +1,9 @@
 # Battleship
-My version of the classic game, Battleship
+My version of the classic game, Battleship.
 
 My name is Alex and I love to play games, such as Battleship!
 
-
+Rules of the project:
 
 Game must have:
 be a two player game (either against the computer or against another player)
@@ -35,3 +35,5 @@ Unsolved problems and future updates:
 My original plan was for the ships' placement on the board to be randomized but I ran into issues getting that to work. I had to hardcode the placement of the ships for now, but I would like to look into this option later.
 
 Another goal I would like to come back to is giving the players the option to place the ships on the board themselves rather than have them pre-loaded. I wasn't sure how to accomplish this yet but would like to come back to it when I have more time to experiment.
+
+I would also like to make the game mobile and tablet friendly in the future.
