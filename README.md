@@ -1,9 +1,9 @@
 # Battleship
-My version of the classic game, Battleship
+My version of the classic game, Battleship.
 
 My name is Alex and I love to play games, such as Battleship!
 
-
+Rules of the project:
 
 Game must have:
 be a two player game (either against the computer or against another player)
