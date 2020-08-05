@@ -8,7 +8,7 @@ $(() => {
     img2 = '<img src="pirate-emoji.png">'
     $headline = $('<h1>').text('BATTLESHIP').appendTo($intro)
     $img3 = $('<img src="ship.png">').attr('id', 'ship').appendTo($intro)
-        $info = $('<p>').text('Click a place on the board where you wish to attack. Each board has 5 boats:').appendTo($intro)
+        $info = $('<p>').text('Click a place on the board where you wish to attack. Players alternate turns after each attack. Each board has 5 boats:').appendTo($intro)
         $ships = $('<ul class="ships">').appendTo($intro)
             $Ship1 = $('<li class = ship>').text('Carrier - length (5)').appendTo($ships)
             $Ship2 = $('<li class = ship>').text('Battleship - length (4)').appendTo($ships) 
